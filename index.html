@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog računalnih komponenti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Katalog računalnih komponenti</h1>
+            <p class="intro">
+                Popis računalnih komponenti i njihovih cijena.
+            </p>
+            <div class="result-line">
+                Ukupno proizvoda:
+                <span id="result-count">0 proizvoda</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+
+        <section class="toolbar">
+            <div class="control-group">
+                <label for="category-filter">Kategorija:</label>
+                <select id="category-filter">
+                    <option value="Sve">Sve kategorije</option>
+                    <option value="Procesori">Procesori</option>
+                    <option value="Grafičke kartice">Grafičke kartice</option>
+                    <option value="Memorija">Memorija</option>
+                    <option value="Pohrana">Pohrana</option>
+                    <option value="Matične ploče">Matične ploče</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="sort-order">Sortiraj prema:</label>
+                <select id="sort-order">
+                    <option value="name-asc">Naziv: A - Ž</option>
+                    <option value="price-asc">Cijena: od najniže</option>
+                    <option value="price-desc">Cijena: od najviše</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="catalog" aria-label="Popis proizvoda"></section>
+
+        <p id="empty-state" class="empty-state" hidden>
+            Nema proizvoda u ovoj kategoriji.
+        </p>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Školski projekt - Katalog računalnih komponenti</p>
+    </footer>
+
+</body>
+</html>
